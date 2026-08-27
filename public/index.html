@@ -1,0 +1,1844 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" /><style>
+.dsh-makers-tip[data-tip]{position:relative;display:inline-flex;max-width:100%;vertical-align:middle;cursor:not-allowed}
+.dsh-makers-tip[data-tip]>:disabled{pointer-events:none}
+.dsh-makers-locked{opacity:.45;cursor:not-allowed}
+#dsh-makers-hover-tip{position:fixed;z-index:2147483647;pointer-events:none;background:var(--dsw-alias-label-primary,#1a1a1a);color:var(--dsw-alias-bg-layer-3,#fff);white-space:nowrap;border-radius:6px;padding:4px 8px;font-size:11px;line-height:17px;font-weight:400;max-width:min(320px,calc(100vw - 16px));box-shadow:0 4px 12px rgba(0,0,0,.18)}
+#dsh-makers-hover-tip[hidden]{display:none!important}
+</style><script>
+window.__DSH_BOOT__ = {"rev":"b5222055fc01","entries":[{"id":"@deepseek-ai/dsh-api-gateway","url":"/plugins/@deepseek-ai/dsh-api-gateway/client.js?rev=cdcb59a584ac","rev":"cdcb59a584ac","inject":["@deepseek-ai/dsh-typert-registry","@deepseek-ai/dsh-client-connection"],"immediately":true},{"id":"@deepseek-ai/dsh-api-remotes","url":"/plugins/@deepseek-ai/dsh-api-remotes/client.js?rev=bcfb9edbb825","rev":"bcfb9edbb825","inject":["@deepseek-ai/dsh-api-gateway"],"immediately":true},{"id":"@deepseek-ai/dsh-client-connection","url":"/plugins/@deepseek-ai/dsh-client-connection/client.js?rev=8e2ea96f6eba","rev":"8e2ea96f6eba","inject":[],"immediately":true},{"id":"@deepseek-ai/dsh-client-locale","url":"/plugins/@deepseek-ai/dsh-client-locale/client.js?rev=64388660f485","rev":"64388660f485","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-api-remotes"],"immediately":true},{"id":"@deepseek-ai/dsh-client-modules","url":"/plugins/@deepseek-ai/dsh-client-modules/client.js?rev=48908e43ade0","rev":"48908e43ade0","inject":[],"immediately":true},{"id":"@deepseek-ai/dsh-client-runtime","url":"/plugins/@deepseek-ai/dsh-client-runtime/client.js?rev=c3303226b83b","rev":"c3303226b83b","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-typert-registry","@deepseek-ai/dsh-api-remotes"],"immediately":true},{"id":"@deepseek-ai/dsh-client-ui-agent-preset","url":"/plugins/@deepseek-ai/dsh-client-ui-agent-preset/client.js?rev=4c5aee76b189","rev":"4c5aee76b189","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-commands","url":"/plugins/@deepseek-ai/dsh-client-ui-commands/client.js?rev=1270e347eb54","rev":"1270e347eb54","inject":["@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-input-trigger","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-conversation","url":"/plugins/@deepseek-ai/dsh-client-ui-conversation/client.js?rev=506160553732","rev":"506160553732","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-ui-layout"]},{"id":"@deepseek-ai/dsh-client-ui-deliverables","url":"/plugins/@deepseek-ai/dsh-client-ui-deliverables/client.js?rev=cdc1db73caa3","rev":"cdc1db73caa3","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-directory-picker-native","url":"/plugins/@deepseek-ai/dsh-client-ui-directory-picker-native/client.js?rev=5eacf9770d3e","rev":"5eacf9770d3e","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-workspace"]},{"id":"@deepseek-ai/dsh-client-ui-goal","url":"/plugins/@deepseek-ai/dsh-client-ui-goal/client.js?rev=9fbdab0a940d","rev":"9fbdab0a940d","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-input-trigger","url":"/plugins/@deepseek-ai/dsh-client-ui-input-trigger/client.js?rev=6a8392daa51e","rev":"6a8392daa51e","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-locale"]},{"id":"@deepseek-ai/dsh-client-ui-jobs","url":"/plugins/@deepseek-ai/dsh-client-ui-jobs/client.js?rev=8a3ae4417b51","rev":"8a3ae4417b51","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation","@deepseek-ai/dsh-client-ui-primitives"]},{"id":"@deepseek-ai/dsh-client-ui-layout","url":"/plugins/@deepseek-ai/dsh-client-ui-layout/client.js?rev=8807ee56f56f","rev":"8807ee56f56f","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-theme"]},{"id":"@deepseek-ai/dsh-client-ui-message-feedback","url":"/plugins/@deepseek-ai/dsh-client-ui-message-feedback/client.js?rev=b71af11b9629","rev":"b71af11b9629","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-model-selection","url":"/plugins/@deepseek-ai/dsh-client-ui-model-selection/client.js?rev=7d3383cabfe0","rev":"7d3383cabfe0","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-commands","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-permission-presets","url":"/plugins/@deepseek-ai/dsh-client-ui-permission-presets/client.js?rev=29cf8f5ab25f","rev":"29cf8f5ab25f","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-commands","@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-ui-settings"]},{"id":"@deepseek-ai/dsh-client-ui-plan","url":"/plugins/@deepseek-ai/dsh-client-ui-plan/client.js?rev=814d7c319382","rev":"814d7c319382","inject":["@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-settings","url":"/plugins/@deepseek-ai/dsh-client-ui-settings/client.js?rev=0995b95e08aa","rev":"0995b95e08aa","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-settings-general","url":"/plugins/@deepseek-ai/dsh-client-ui-settings-general/client.js?rev=ffd5b564493b","rev":"ffd5b564493b","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-ui-sidebar"]},{"id":"@deepseek-ai/dsh-client-ui-settings-models","url":"/plugins/@deepseek-ai/dsh-client-ui-settings-models/client.js?rev=f6c88bfd64ed","rev":"f6c88bfd64ed","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-settings-plugin-inventory","url":"/plugins/@deepseek-ai/dsh-client-ui-settings-plugin-inventory/client.js?rev=e5e5db1fdbb0","rev":"e5e5db1fdbb0","inject":["@deepseek-ai/dsh-api-remotes","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-client-locale"]},{"id":"@deepseek-ai/dsh-client-ui-settings-plugins","url":"/plugins/@deepseek-ai/dsh-client-ui-settings-plugins/client.js?rev=b8886bcccc1a","rev":"b8886bcccc1a","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-sidebar","url":"/plugins/@deepseek-ai/dsh-client-ui-sidebar/client.js?rev=b8f03724988d","rev":"b8f03724988d","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-layout","@deepseek-ai/dsh-client-locale"]},{"id":"@deepseek-ai/dsh-client-ui-skill","url":"/plugins/@deepseek-ai/dsh-client-ui-skill/client.js?rev=ae2c4c8bb023","rev":"ae2c4c8bb023","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-tool","@deepseek-ai/dsh-client-ui-input-trigger","@deepseek-ai/dsh-api-remotes"]},{"id":"@deepseek-ai/dsh-client-ui-subagent","url":"/plugins/@deepseek-ai/dsh-client-ui-subagent/client.js?rev=4f840be262cb","rev":"4f840be262cb","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation","@deepseek-ai/dsh-client-ui-primitives","@deepseek-ai/dsh-client-ui-input-trigger"]},{"id":"@deepseek-ai/dsh-client-ui-theme","url":"/plugins/@deepseek-ai/dsh-client-ui-theme/client.js?rev=240449265bbc","rev":"240449265bbc","inject":["@deepseek-ai/dsh-client-connection","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-settings","@deepseek-ai/dsh-api-remotes"],"immediately":true},{"id":"@deepseek-ai/dsh-client-ui-tool","url":"/plugins/@deepseek-ai/dsh-client-ui-tool/client.js?rev=854069ecfd30","rev":"854069ecfd30","inject":["@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-trajectory","url":"/plugins/@deepseek-ai/dsh-client-ui-trajectory/client.js?rev=f46b23483530","rev":"f46b23483530","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-user-questions","url":"/plugins/@deepseek-ai/dsh-client-ui-user-questions/client.js?rev=d497c77f1a0e","rev":"d497c77f1a0e","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-workflow-run","url":"/plugins/@deepseek-ai/dsh-client-ui-workflow-run/client.js?rev=c8efd1f79632","rev":"c8efd1f79632","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-client-ui-workspace","url":"/plugins/@deepseek-ai/dsh-client-ui-workspace/client.js?rev=d647145f6243","rev":"d647145f6243","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-conversation","@deepseek-ai/dsh-client-ui-sidebar"]},{"id":"@deepseek-ai/dsh-session-log-export","url":"/plugins/@deepseek-ai/dsh-session-log-export/client.js?rev=7c27787733da","rev":"7c27787733da","inject":["@deepseek-ai/dsh-client-locale","@deepseek-ai/dsh-client-runtime","@deepseek-ai/dsh-client-ui-commands","@deepseek-ai/dsh-client-ui-conversation"]},{"id":"@deepseek-ai/dsh-typert-registry","url":"/plugins/@deepseek-ai/dsh-typert-registry/client.js?rev=e316e02b09bd","rev":"e316e02b09bd","inject":[],"immediately":true}]};
+(() => {
+  // The workspace id is issued by the server after sign-in, not invented here.
+  // Upstream this was a random UUID kept in localStorage, which meant the
+  // browser named its own workspace and could name anyone else's; the Agent
+  // side now derives it from the session cookie and rejects a header that does
+  // not match, so this value is only a routing hint.
+  let conversationId = null;
+  window.__DSH_SET_CONVERSATION_ID__ = (id) => {
+    conversationId = String(id || '') || null;
+    window.__DSH_MAKERS_CONVERSATION_ID__ = conversationId;
+  };
+
+  const nativeFetch = window.fetch.bind(window);
+  window.fetch = (input, init = {}) => {
+    const target = new URL(typeof input === 'string' || input instanceof URL ? input : input.url, location.href);
+    const routed = target.pathname.startsWith('/api') || target.pathname.startsWith('/rpc');
+    if (target.origin !== location.origin || !routed || conversationId === null) {
+      return nativeFetch(input, init);
+    }
+    const headers = new Headers(input instanceof Request ? input.headers : init.headers);
+    headers.set('makers-conversation-id', conversationId);
+    if (input instanceof Request) return nativeFetch(new Request(input, { ...init, headers }));
+    return nativeFetch(input, { ...init, headers });
+  };
+
+  // The shell's own module script is withheld from <head> and appended only
+  // once the gate has authenticated the visitor. Booting it first would let it
+  // open its event streams before any identity existed, and every one of those
+  // calls would be rejected.
+  let started = false;
+  window.__DSH_BOOT_SHELL__ = () => {
+    if (started) return;
+    started = true;
+    const node = document.createElement('script');
+    node.type = 'module';
+    node.crossOrigin = 'anonymous';
+    node.src = "/assets/index-Dqw48FrP.js";
+    document.head.appendChild(node);
+  };
+})();
+(() => {
+  const id = 'dsh-makers-hover-tip';
+  const hostOf = (node) => {
+    if (!(node instanceof Element)) return null;
+    const tip = (el) => el && el.getAttribute('data-tip') ? el : null;
+    const from = (el) => el ? tip(el) || tip(el.querySelector('[data-tip]')) : null;
+    return tip(node.closest('[data-tip]'))
+      || from(node.closest('[role="menuitem"]'))
+      || from([...node.children].find((child) => child.getAttribute('role') === 'menuitem'));
+  };
+  const bubble = () => {
+    let el = document.getElementById(id);
+    if (el) return el;
+    el = document.createElement('div');
+    el.id = id;
+    el.setAttribute('role', 'tooltip');
+    el.hidden = true;
+    document.body.appendChild(el);
+    return el;
+  };
+  const hide = () => {
+    const el = document.getElementById(id);
+    if (el) el.hidden = true;
+  };
+  const show = (host) => {
+    const text = host.getAttribute('data-tip');
+    if (!text) return hide();
+    const el = bubble();
+    el.textContent = text;
+    el.hidden = false;
+    const r = host.closest('[role="menuitem"]')?.getBoundingClientRect() ?? host.getBoundingClientRect();
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
+    let left = r.left + r.width / 2 - w / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - w - 8));
+    let top = r.top - h - 8;
+    if (top < 8) top = r.bottom + 8;
+    el.style.left = left + 'px';
+    el.style.top = top + 'px';
+  };
+  document.addEventListener('pointerover', (event) => {
+    const host = hostOf(event.target);
+    if (host) show(host);
+    else hide();
+  });
+  document.addEventListener('pointerdown', hide);
+  window.addEventListener('scroll', hide, true);
+})();
+</script>
+<!-- dsh-makers-actions -->
+<style>
+[class*="_centerCol"]{position:relative;container:dsh-center / inline-size}
+[class*="_titleRow"]{position:relative}
+[class*="_composerHero"]{z-index:5}
+#dsh-makers-chrome{position:absolute;top:0;right:0;left:0;z-index:0;display:flex;align-items:center;justify-content:flex-end;box-sizing:border-box;height:50px;padding:8px 16px;pointer-events:none}
+#dsh-makers-chrome>*{pointer-events:auto}
+#dsh-makers-actions{position:relative;z-index:0;display:flex;align-items:center;gap:2px;margin:0;padding:0;border:none;background:transparent;font-family:inherit;flex:none}
+#dsh-makers-actions[data-docked=true]{position:static}
+#dsh-makers-actions a{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 12px;border:none;border-radius:9px;color:#57606a;background:transparent;text-decoration:none;font:inherit;font-size:14px;font-weight:500;line-height:20px;white-space:nowrap;cursor:pointer;transition:background .16s,color .16s}
+#dsh-makers-actions a:hover{background:#f2f4f7;color:#1f2328}
+#dsh-makers-actions a:focus-visible{outline:2px solid var(--dsw-alias-brand-primary,#3964fe);outline-offset:1px}
+#dsh-makers-actions svg{flex:none}
+#dsh-makers-powered{position:absolute;top:10px;left:50%;z-index:0;display:inline-flex;align-items:center;gap:8px;height:28px;max-width:calc(100% - 2 * var(--dsh-makers-actions-width, 0px));padding:0 8px;border:none;border-radius:8px;background:transparent;color:#8b949e;font:inherit;font-size:12.5px;line-height:18px;white-space:nowrap;box-sizing:border-box;overflow:hidden;transform:translateX(-50%);pointer-events:auto}
+#dsh-makers-powered b{color:#5b6470;font-weight:600}
+#dsh-makers-powered[data-docked=true]{top:50%;transform:translate(-50%,-50%)}
+.dsh-makers-powered-divider{width:1px;height:12px;flex:none;background:#e8eaed}
+.dsh-makers-powered-more{display:inline-flex;align-items:center;gap:3px;flex:none;height:22px;padding:0 6px;border:none;border-radius:6px;background:transparent;color:#3b63f6;font:inherit;font-size:12.5px;font-weight:600;line-height:18px;white-space:nowrap;cursor:pointer;transition:background .16s}
+.dsh-makers-powered-more svg{flex:none;transition:transform .16s}
+.dsh-makers-powered-more:hover{background:rgba(59,99,246,.1)}
+.dsh-makers-powered-more:hover svg{transform:translateX(2px)}
+.dsh-makers-powered-more:focus-visible{outline:2px solid var(--dsw-alias-brand-primary,#3964fe);outline-offset:1px}
+#dsh-makers-powered[data-compact=true] .dsh-makers-powered-label,#dsh-makers-powered[data-compact=true] .dsh-makers-powered-divider,#dsh-makers-actions[data-compact=true] .dsh-makers-action-label{display:none}
+#dsh-makers-actions[data-compact=true] a{padding:0 8px}
+#dsh-makers-powered[data-compact=true]{padding:0 6px;gap:0}
+#dsh-makers-powered[data-hidden=true]{visibility:hidden;pointer-events:none}
+#dsh-makers-contact{position:fixed;inset:0;z-index:2147483646;display:grid;place-items:center;padding:20px}
+#dsh-makers-contact[hidden]{display:none!important}
+#dsh-makers-contact .dsh-makers-contact-overlay{position:absolute;inset:0;background:rgba(15,17,23,.42);backdrop-filter:blur(2px)}
+#dsh-makers-contact .dsh-makers-contact-card{position:relative;z-index:1;width:min(520px,calc(100vw - 40px));overflow:hidden;border-radius:16px;background:#fff;box-shadow:0 26px 70px rgba(17,18,22,.3);font-family:system-ui,-apple-system,sans-serif}
+#dsh-makers-contact .dsh-makers-contact-body{padding:22px 24px 24px}
+#dsh-makers-contact .dsh-makers-contact-icon{display:grid;width:42px;height:42px;place-items:center;margin-bottom:18px;border:1px solid #e8eaee;border-radius:10px;color:#17181c}
+#dsh-makers-contact .dsh-makers-contact-icon svg{width:22px;height:22px}
+#dsh-makers-contact h2{margin:0 0 8px;color:#17181c;font-size:20px;font-weight:700;letter-spacing:-.3px;line-height:1.35}
+#dsh-makers-contact p{margin:0;color:#6b7280;font-size:14px;line-height:1.7}
+#dsh-makers-contact .dsh-makers-contact-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;box-sizing:border-box;padding:16px 24px;border-top:1px solid #e8eaee;background:#fafbfc}
+#dsh-makers-contact .dsh-makers-contact-footer button,#dsh-makers-contact .dsh-makers-contact-footer a{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 18px;border-radius:9px;font-size:14px;font-weight:500;text-decoration:none;cursor:pointer}
+#dsh-makers-contact .dsh-makers-contact-later{border:1px solid #d6dae1;background:#fff;color:#17181c}
+#dsh-makers-contact .dsh-makers-contact-later:hover{border-color:#6b7280;background:#f7f8fa}
+#dsh-makers-contact .dsh-makers-contact-go{border:none;background:#3b5cff;color:#fff;font-weight:600}
+#dsh-makers-contact .dsh-makers-contact-go:hover{background:#2f4fe6}
+@container dsh-center (max-width:880px){#dsh-makers-actions .dsh-makers-action-label,#dsh-makers-powered .dsh-makers-powered-label,#dsh-makers-powered .dsh-makers-powered-divider{display:none}#dsh-makers-actions a{padding:0 8px}#dsh-makers-powered{padding:0 6px;gap:0}}
+@container dsh-center (max-width:360px){#dsh-makers-powered{visibility:hidden;pointer-events:none}}
+</style><script>
+(() => {
+  const intl = location.hostname.endsWith(".edgeone.dev");
+  document.documentElement.lang = intl ? "en" : "zh-CN";
+  const deployParams = "?template=deepseek-harness&from=within&fromAgent=1&agentLang=typescript";
+  const deployHref = intl ? "https://edgeone.ai/makers/new" + deployParams : "https://console.cloud.tencent.com/edgeone/makers/new" + deployParams;
+  const contactHref = intl ? "https://pages.edgeone.ai/contact?source=deepseek-harness" : "https://cloud.tencent.com/online-service?from=connect-us";
+  const copy = {
+    zh: { github: "GitHub 源码", deploy: "模版部署", powered: "基于 <b>EdgeOne Makers Agents</b> 部署", more: "了解更多", poweredTitle: "集成到我的产品", title: "从 DeepSeek Harness 到你的云端 Agent", body: "DeepSeek Harness 已接入 EdgeOne Makers Agents。部署后，你可以自由扩展模型、工具、技能与界面，打造适用于 Vibe Coding、任务自动化和内容生产的云端 Agent，并将生成的应用与内容发布至全球边缘网络。Makers 提供 Agent 托管、安全沙箱与应用交付的一体化方案。", later: "以后再说", go: "联系我们" },
+    en: { github: "GitHub", deploy: "Deploy", powered: "Powered by <b>EdgeOne Makers Agents</b>", more: "Learn more", poweredTitle: "Integrate with my product", title: "From DeepSeek Harness to Your Cloud Agent", body: "DeepSeek Harness now runs on EdgeOne Makers Agents. After you deploy, you can extend models, tools, skills, and the UI to build a cloud Agent for Vibe Coding, task automation, and content production, then publish generated apps and content to the global edge network. Makers provides an integrated solution for Agent hosting, a secure sandbox, and app delivery.", later: "Maybe later", go: "Contact us" }
+  };
+  const localeOf = () => {
+    const lang = (document.documentElement.lang || "").toLowerCase();
+    if (lang.startsWith("en")) return "en";
+    if (lang.startsWith("zh")) return "zh";
+    return intl ? "en" : "zh";
+  };
+  const githubIcon = '<svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8"/></svg>';
+  const deployIcon = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1 2-1 4-1 4s2 0 4-1"/><path d="M9 18c-1.5-.6-2.4-1.5-3-3 3.2-7 7.6-9.5 14-9-.5 6.4-3 10.8-10 14z"/><path d="M13.5 10.5a1.5 1.5 0 1 0 2.1-2.1 1.5 1.5 0 0 0-2.1 2.1z"/></svg>';
+  const moreIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+  const bubbleIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+  const mount = () => {
+    if (document.getElementById("dsh-makers-actions")) return;
+    const nav = document.createElement("nav");
+    nav.id = "dsh-makers-actions";
+    nav.setAttribute("aria-label", "EdgeOne Makers");
+    nav.dataset.docked = "false";
+    const github = document.createElement("a");
+    github.href = "https://github.com/TencentEdgeOne/deepseek-harness";
+    github.target = "_blank";
+    github.rel = "noopener noreferrer";
+    github.innerHTML = githubIcon + '<span class="dsh-makers-action-label"></span>';
+    const deploy = document.createElement("a");
+    deploy.target = "_blank";
+    deploy.rel = "noopener noreferrer";
+    deploy.innerHTML = deployIcon + '<span class="dsh-makers-action-label"></span>';
+    nav.append(github, deploy);
+    const powered = document.createElement("div");
+    powered.id = "dsh-makers-powered";
+    powered.dataset.docked = "false";
+    powered.innerHTML = '<span class="dsh-makers-powered-label"></span><span class="dsh-makers-powered-divider" aria-hidden="true"></span><button type="button" class="dsh-makers-powered-more"><span class="dsh-makers-powered-more-label"></span>' + moreIcon + "</button>";
+    const more = powered.querySelector(".dsh-makers-powered-more");
+    const chrome = document.createElement("div");
+    chrome.id = "dsh-makers-chrome";
+    const dialog = document.createElement("div");
+    dialog.id = "dsh-makers-contact";
+    dialog.hidden = true;
+    dialog.innerHTML = '<div class="dsh-makers-contact-overlay" data-close="true"></div><div class="dsh-makers-contact-card" role="dialog" aria-modal="true" aria-labelledby="dsh-makers-contact-title"><div class="dsh-makers-contact-body"><div class="dsh-makers-contact-icon">' + bubbleIcon + '</div><h2 id="dsh-makers-contact-title"></h2><p></p></div><div class="dsh-makers-contact-footer"><button type="button" class="dsh-makers-contact-later" data-close="true"></button><a class="dsh-makers-contact-go" target="_blank" rel="noopener noreferrer"></a></div></div>';
+    const centerCol = () => document.querySelector("[class*=\"_centerCol\"]");
+    const titleRow = () => document.querySelector("[class*=\"_titleRow\"]");
+    const headerOf = (row) => row?.closest("header") || row?.parentElement || null;
+    const headerVisible = (header) => {
+      if (!header) return false;
+      if ([...header.classList].some((name) => name.includes("headerHidden"))) return false;
+      const style = getComputedStyle(header);
+      return style.display !== "none" && style.visibility !== "hidden";
+    };
+    let adopting = false;
+    let laying = false;
+    let layoutRaf = 0;
+    const overlap = (a, b, gap) => a.left < b.right + gap && a.right + gap > b.left && a.top < b.bottom && a.bottom > b.top;
+    const layout = () => {
+      if (laying || !nav.isConnected || !powered.isConnected) return;
+      laying = true;
+      try {
+        document.documentElement.style.setProperty("--dsh-makers-actions-width", Math.ceil(nav.getBoundingClientRect().width) + 12 + "px");
+        const hit = () => {
+          const a = nav.getBoundingClientRect();
+          const b = powered.getBoundingClientRect();
+          if (!a.width || !b.width) return false;
+          if (overlap(a, b, 8)) return true;
+          if (powered.dataset.docked !== "true") return false;
+          const cluster = titleRow()?.querySelector("[class*=\"_titleCluster\"]");
+          return !!(cluster && overlap(cluster.getBoundingClientRect(), b, 8));
+        };
+        const apply = (level) => {
+          powered.dataset.compact = level >= 1 ? "true" : "false";
+          nav.dataset.compact = level >= 2 ? "true" : "false";
+          powered.dataset.hidden = level >= 3 ? "true" : "false";
+        };
+        const current = powered.dataset.hidden === "true" ? 3 : nav.dataset.compact === "true" ? 2 : powered.dataset.compact === "true" ? 1 : 0;
+        if (hit()) {
+          if (current < 3) apply(current + 1);
+        } else if (current > 0) {
+          apply(current - 1);
+          if (hit()) apply(current);
+        }
+      } finally {
+        laying = false;
+      }
+    };
+    const scheduleLayout = () => {
+      if (layoutRaf) return;
+      layoutRaf = requestAnimationFrame(() => {
+        layoutRaf = 0;
+        layout();
+      });
+    };
+    const adopt = () => {
+      if (adopting) return;
+      adopting = true;
+      try {
+        const host = centerCol();
+        if (!host) return;
+        const row = titleRow();
+        const header = headerOf(row);
+        const utilities = header?.querySelector("[class*=\"_headerUtilities\"]");
+        if (headerVisible(header) && utilities) {
+          if (nav.parentElement !== utilities) utilities.append(nav);
+          if (powered.parentElement !== row) row.append(powered);
+          chrome.remove();
+          nav.dataset.docked = "true";
+          powered.dataset.docked = "true";
+        } else {
+          if (chrome.parentElement !== host) host.append(chrome);
+          if (powered.parentElement !== chrome) chrome.append(powered);
+          if (nav.parentElement !== chrome) chrome.append(nav);
+          nav.dataset.docked = "false";
+          powered.dataset.docked = "false";
+        }
+        if (ro) {
+          ro.observe(nav);
+          ro.observe(powered);
+          ro.observe(host);
+          if (row) ro.observe(row);
+        }
+        scheduleLayout();
+      } finally {
+        adopting = false;
+      }
+    };
+    const ro = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(scheduleLayout);
+    const applyCopy = () => {
+      const locale = localeOf();
+      const t = copy[locale];
+      github.title = t.github;
+      github.querySelector(".dsh-makers-action-label").textContent = t.github;
+      deploy.href = deployHref;
+      deploy.title = t.deploy;
+      deploy.querySelector(".dsh-makers-action-label").textContent = t.deploy;
+      more.title = t.poweredTitle;
+      more.querySelector(".dsh-makers-powered-more-label").textContent = t.more;
+      powered.querySelector(".dsh-makers-powered-label").innerHTML = t.powered;
+      dialog.querySelector("#dsh-makers-contact-title").textContent = t.title;
+      dialog.querySelector(".dsh-makers-contact-body p").textContent = t.body;
+      dialog.querySelector(".dsh-makers-contact-later").textContent = t.later;
+      const go = dialog.querySelector(".dsh-makers-contact-go");
+      go.href = contactHref;
+      go.textContent = t.go;
+    };
+    applyCopy();
+    new MutationObserver(applyCopy).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+    const close = () => {
+      dialog.hidden = true;
+      more.focus();
+    };
+    const open = () => {
+      dialog.hidden = false;
+      dialog.querySelector(".dsh-makers-contact-later")?.focus();
+    };
+    more.addEventListener("click", open);
+    dialog.addEventListener("click", (event) => {
+      if (event.target.closest("[data-close]")) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !dialog.hidden) close();
+    });
+    document.body.append(dialog);
+    adopt();
+    const observer = new MutationObserver(adopt);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "style", "hidden"] });
+    window.addEventListener("resize", scheduleLayout);
+  };
+  if (document.body) mount();
+  else document.addEventListener("DOMContentLoaded", mount);
+})();
+</script>
+<!-- /dsh-makers-actions -->
+<!-- dsh-gate -->
+<style>
+/* DeepSeek Harness access gate.
+   Every selector is prefixed dsh-gate- because this stylesheet is inlined into
+   the host page and must never collide with the app's own rules. Tokens are
+   declared on the three roots (overlay / launcher / panel) rather than on
+   :root so the host app never inherits them. */
+
+.dsh-gate-overlay,
+.dsh-gate-launcher,
+.dsh-gate-panel {
+  --dsh-gate-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --dsh-gate-ink: #17181c;
+  --dsh-gate-muted: #6b7280;
+  --dsh-gate-faint: #9ca3af;
+  --dsh-gate-line: #e8eaee;
+  --dsh-gate-field: #d6dae1;
+  --dsh-gate-surface: #fff;
+  --dsh-gate-subtle: #f7f8fa;
+  --dsh-gate-primary: #3b5cff;
+  --dsh-gate-primary-hover: #2f4fe6;
+  --dsh-gate-danger: #b42318;
+  box-sizing: border-box;
+  color: var(--dsh-gate-ink);
+  font-family: var(--dsh-gate-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dsh-gate-overlay *,
+.dsh-gate-launcher *,
+.dsh-gate-panel * {
+  box-sizing: border-box;
+}
+
+.dsh-gate-overlay ::selection,
+.dsh-gate-panel ::selection {
+  background: rgba(59, 92, 255, 0.16);
+  color: var(--dsh-gate-ink);
+}
+
+.dsh-gate-overlay :focus-visible,
+.dsh-gate-launcher:focus-visible,
+.dsh-gate-panel :focus-visible {
+  outline: 2px solid var(--dsh-gate-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- overlay */
+
+.dsh-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483200;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  overflow-y: auto;
+  background: rgba(15, 17, 23, 0.46);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.dsh-gate-overlay[hidden] {
+  display: none !important;
+}
+
+.dsh-gate-card {
+  width: min(400px, 100%);
+  padding: 30px 28px 22px;
+  border: 1px solid var(--dsh-gate-line);
+  border-radius: 16px;
+  background: var(--dsh-gate-surface);
+  box-shadow: 0 24px 64px rgba(17, 18, 22, 0.22);
+  animation: dsh-gate-rise 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dsh-gate-rise {
+  from {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+}
+
+.dsh-gate-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  margin-bottom: 18px;
+  border: 1px solid var(--dsh-gate-line);
+  border-radius: 11px;
+  color: var(--dsh-gate-primary);
+  background: var(--dsh-gate-subtle);
+}
+
+.dsh-gate-mark svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dsh-gate-eyebrow {
+  margin: 0 0 6px;
+  color: var(--dsh-gate-faint);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.dsh-gate-title {
+  margin: 0 0 10px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.dsh-gate-intro {
+  margin: 0 0 8px;
+  color: var(--dsh-gate-muted);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.dsh-gate-warn {
+  margin: 14px 0 0;
+  padding: 11px 13px;
+  border: 1px solid #f3e2bd;
+  border-radius: 10px;
+  background: #fdf8ec;
+  color: #7c5510;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ forms */
+
+.dsh-gate-form {
+  margin: 22px 0 0;
+}
+
+.dsh-gate-field {
+  margin-bottom: 14px;
+}
+
+.dsh-gate-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dsh-gate-hint {
+  display: block;
+  margin-top: 5px;
+  color: var(--dsh-gate-faint);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.dsh-gate-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--dsh-gate-field);
+  border-radius: 10px;
+  background: var(--dsh-gate-surface);
+  color: var(--dsh-gate-ink);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.16s, box-shadow 0.16s;
+}
+
+.dsh-gate-input::placeholder {
+  color: #a8adb7;
+}
+
+.dsh-gate-input:hover {
+  border-color: #bcc2cc;
+}
+
+.dsh-gate-input:focus {
+  border-color: var(--dsh-gate-primary);
+  box-shadow: 0 0 0 3px rgba(59, 92, 255, 0.15);
+  outline: none;
+}
+
+.dsh-gate-input:disabled {
+  background: var(--dsh-gate-subtle);
+  color: var(--dsh-gate-muted);
+  cursor: not-allowed;
+}
+
+.dsh-gate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.16s, border-color 0.16s, color 0.16s;
+}
+
+.dsh-gate-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.dsh-gate-btn-primary {
+  background: var(--dsh-gate-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.dsh-gate-btn-primary:hover:not(:disabled) {
+  background: var(--dsh-gate-primary-hover);
+}
+
+.dsh-gate-btn-quiet {
+  border-color: var(--dsh-gate-field);
+  background: var(--dsh-gate-surface);
+  color: var(--dsh-gate-ink);
+}
+
+.dsh-gate-btn-quiet:hover:not(:disabled) {
+  border-color: var(--dsh-gate-muted);
+  background: var(--dsh-gate-subtle);
+}
+
+.dsh-gate-btn-danger {
+  border-color: #f0cfcb;
+  background: var(--dsh-gate-surface);
+  color: var(--dsh-gate-danger);
+}
+
+.dsh-gate-btn-danger:hover:not(:disabled) {
+  border-color: var(--dsh-gate-danger);
+  background: #fdf3f2;
+}
+
+.dsh-gate-btn-block {
+  width: 100%;
+  height: 42px;
+  margin-top: 4px;
+}
+
+.dsh-gate-btn-tiny {
+  height: 28px;
+  padding: 0 9px;
+  border-radius: 7px;
+  font-size: 12.5px;
+}
+
+/* --------------------------------------------------------------- messages */
+
+.dsh-gate-alert,
+.dsh-gate-status {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dsh-gate-alert {
+  border: 1px solid #f3c9c4;
+  background: #fdf3f2;
+  color: var(--dsh-gate-danger);
+}
+
+.dsh-gate-status {
+  border: 1px solid #cfe3d3;
+  background: #f2f9f4;
+  color: #1c6b3a;
+}
+
+.dsh-gate-alert[hidden],
+.dsh-gate-status[hidden] {
+  display: none !important;
+}
+
+.dsh-gate-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: dsh-gate-spin 0.7s linear infinite;
+}
+
+@keyframes dsh-gate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dsh-gate-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0 2px;
+  color: var(--dsh-gate-muted);
+  font-size: 13.5px;
+}
+
+.dsh-gate-loading .dsh-gate-spinner {
+  border-color: rgba(59, 92, 255, 0.25);
+  border-top-color: var(--dsh-gate-primary);
+}
+
+.dsh-gate-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--dsh-gate-line);
+  color: var(--dsh-gate-faint);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.dsh-gate-credit {
+  display: block;
+  margin-top: 6px;
+  color: #b3b8c2;
+  font-size: 11.5px;
+}
+
+/* --------------------------------------------------------------- launcher */
+
+.dsh-gate-launcher {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2147483100;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  max-width: 190px;
+  padding: 0 10px;
+  border: 1px solid var(--dsh-gate-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 10px rgba(17, 18, 22, 0.08);
+  color: var(--dsh-gate-muted);
+  font-family: var(--dsh-gate-font);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0.72;
+  transition: opacity 0.16s, border-color 0.16s, color 0.16s, box-shadow 0.16s;
+}
+
+.dsh-gate-launcher:hover,
+.dsh-gate-launcher[aria-expanded="true"] {
+  border-color: #cfd4dc;
+  box-shadow: 0 5px 16px rgba(17, 18, 22, 0.12);
+  color: var(--dsh-gate-ink);
+  opacity: 1;
+}
+
+.dsh-gate-launcher svg {
+  width: 13px;
+  height: 13px;
+  flex: none;
+}
+
+.dsh-gate-launcher-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ panel */
+
+.dsh-gate-panel {
+  position: fixed;
+  bottom: 52px;
+  left: 14px;
+  z-index: 2147483110;
+  display: flex;
+  flex-direction: column;
+  width: min(720px, calc(100vw - 28px));
+  max-height: min(600px, calc(100vh - 76px));
+  border: 1px solid var(--dsh-gate-line);
+  border-radius: 15px;
+  background: var(--dsh-gate-surface);
+  box-shadow: 0 18px 48px rgba(17, 18, 22, 0.2);
+  animation: dsh-gate-rise 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dsh-gate-panel[hidden] {
+  display: none !important;
+}
+
+.dsh-gate-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex: none;
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--dsh-gate-line);
+}
+
+.dsh-gate-panel-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dsh-gate-close {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  place-items: center;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--dsh-gate-muted);
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+}
+
+.dsh-gate-close:hover {
+  background: var(--dsh-gate-subtle);
+  color: var(--dsh-gate-ink);
+}
+
+.dsh-gate-close svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* The body is the only scroller: on short viewports the panel stays inside
+   the viewport instead of running off the bottom of the screen. */
+.dsh-gate-panel-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 16px 18px 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #cfd4dc transparent;
+}
+
+.dsh-gate-panel-body::-webkit-scrollbar {
+  width: 9px;
+}
+
+.dsh-gate-panel-body::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: #cfd4dc;
+  background-clip: content-box;
+}
+
+.dsh-gate-section + .dsh-gate-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--dsh-gate-line);
+}
+
+.dsh-gate-section-title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dsh-gate-section-note {
+  margin: 0 0 12px;
+  color: var(--dsh-gate-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dsh-gate-caution {
+  margin: 10px 0 0;
+  color: #7c5510;
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+
+.dsh-gate-identity {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dsh-gate-identity-name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dsh-gate-tag {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--dsh-gate-subtle);
+  color: var(--dsh-gate-muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.dsh-gate-tag-admin {
+  background: rgba(59, 92, 255, 0.1);
+  color: var(--dsh-gate-primary-hover);
+}
+
+.dsh-gate-tag-off {
+  background: #fdf3f2;
+  color: var(--dsh-gate-danger);
+}
+
+.dsh-gate-usage {
+  margin: 12px 0 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--dsh-gate-muted);
+  font-size: 12.5px;
+}
+
+.dsh-gate-usage-value {
+  color: var(--dsh-gate-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.dsh-gate-meter {
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: #eef0f4;
+  overflow: hidden;
+}
+
+.dsh-gate-meter-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--dsh-gate-primary);
+  transition: width 0.3s ease-out;
+}
+
+.dsh-gate-meter-fill[data-level="warn"] {
+  background: #e08c1a;
+}
+
+.dsh-gate-meter-fill[data-level="over"] {
+  background: #d3392b;
+}
+
+.dsh-gate-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dsh-gate-row .dsh-gate-field {
+  flex: 1 1 180px;
+  margin-bottom: 0;
+}
+
+.dsh-gate-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* ------------------------------------------------------------------ table */
+
+.dsh-gate-tablewrap {
+  margin: 0 -2px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.dsh-gate-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.dsh-gate-table th {
+  padding: 0 8px 7px;
+  border-bottom: 1px solid var(--dsh-gate-line);
+  color: var(--dsh-gate-muted);
+  font-size: 11.5px;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dsh-gate-table td {
+  padding: 9px 8px;
+  border-bottom: 1px solid #f2f3f6;
+  vertical-align: middle;
+}
+
+.dsh-gate-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dsh-gate-cell-name {
+  font-weight: 500;
+}
+
+.dsh-gate-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.dsh-gate-quota-input {
+  width: 106px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--dsh-gate-field);
+  border-radius: 8px;
+  background: var(--dsh-gate-surface);
+  color: var(--dsh-gate-ink);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.dsh-gate-quota-input:focus {
+  border-color: var(--dsh-gate-primary);
+  box-shadow: 0 0 0 3px rgba(59, 92, 255, 0.15);
+  outline: none;
+}
+
+.dsh-gate-cell-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dsh-gate-detail td {
+  padding: 0 8px 12px;
+  background: var(--dsh-gate-subtle);
+}
+
+.dsh-gate-detail-inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 10px;
+  border: 1px solid var(--dsh-gate-line);
+  border-radius: 10px;
+  background: var(--dsh-gate-surface);
+}
+
+.dsh-gate-detail-text {
+  flex: 1 1 240px;
+  color: var(--dsh-gate-ink);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.dsh-gate-empty {
+  padding: 16px 0;
+  color: var(--dsh-gate-muted);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width: 760px) {
+  .dsh-gate-panel {
+    left: 8px;
+    right: 8px;
+    bottom: 50px;
+    width: auto;
+    max-height: calc(100vh - 72px);
+  }
+}
+
+@media (max-width: 420px) {
+  .dsh-gate-card {
+    padding: 24px 18px 18px;
+    border-radius: 14px;
+  }
+
+  .dsh-gate-panel-head,
+  .dsh-gate-panel-body {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .dsh-gate-launcher {
+    max-width: calc(100vw - 28px);
+  }
+
+  .dsh-gate-cell-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dsh-gate-overlay *,
+  .dsh-gate-launcher,
+  .dsh-gate-panel,
+  .dsh-gate-panel * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+</style>
+<script>
+(() => {
+  'use strict';
+
+  // Boot ordering: the host shell must not start until the visitor is known,
+  // so index.html withholds the shell's module script behind
+  // __DSH_BOOT_SHELL__ and this gate calls it exactly once. Until then this
+  // overlay owns the viewport.
+  const intl = location.hostname.endsWith('.edgeone.dev');
+  const L = intl ? 'en' : 'zh';
+
+  const copy = {
+    zh: {
+      loading: '正在检查登录状态…',
+      setupEyebrow: '首次设置',
+      setupTitle: '设置管理员账号',
+      setupIntro: '这个部署还没有管理员。现在设置的人将成为管理员。',
+      setupWarn: '部署完成后请立刻设置。谁先设置，谁就是管理员。',
+      loginEyebrow: '登录',
+      loginTitle: 'DeepSeek Harness',
+      loginIntro: '这里不开放自助注册。没有账号请联系管理员为你创建。',
+      username: '用户名',
+      password: '密码',
+      confirm: '确认密码',
+      usernameHint: '3–32 位，字母、数字、下划线、点或连字符',
+      passwordHint: '至少 8 位，不能是常见弱密码',
+      createAdmin: '成为管理员',
+      signIn: '登录',
+      working: '处理中…',
+      credit: 'made by yifu233',
+      panelTitle: '账号',
+      close: '关闭',
+      role: '角色',
+      admin: '管理员',
+      user: '用户',
+      disabled: '已停用',
+      usage: 'Token 用量',
+      unlimited: '无限制',
+      myKey: '我的 API Key',
+      keySet: '已设置私人 Key，留空保存则不改动',
+      keyNone: '当前使用公共 Key',
+      keyLabel: 'API Key',
+      baseUrlLabel: 'Base URL（可选）',
+      save: '保存',
+      clear: '清除',
+      keyCaution: 'Key 存在服务器上，管理员在技术上可以读取。这不是端到端加密。',
+      logout: '退出登录',
+      users: '用户管理',
+      createUser: '新建用户',
+      quota: '配额',
+      quotaBlank: '留空为无限制',
+      create: '创建',
+      colUser: '用户',
+      colRole: '角色',
+      colUsage: '用量 / 配额',
+      colActions: '操作',
+      edit: '管理',
+      saveQuota: '保存配额',
+      disable: '停用',
+      enable: '启用',
+      resetPw: '重置密码',
+      newPassword: '新密码',
+      del: '删除',
+      confirmDelete: '确定删除用户 %s？其工作区记录和用量将一并清除。',
+      defaults: '新用户默认配额',
+      saved: '已保存',
+      noUsers: '还没有其他用户',
+      errNetwork: '网络异常，请重试。',
+      errMismatch: '两次输入的密码不一致。',
+      'err.already-claimed': '管理员已被设置，请改用登录。',
+      'err.invalid-username': '用户名格式不符合要求。',
+      'err.weak-password': '密码太弱，请至少 8 位且避免常见密码。',
+      'err.invalid-credentials': '用户名或密码不正确。',
+      'err.disabled': '该账号已被停用，请联系管理员。',
+      'err.duplicate': '该用户名已存在。',
+      'err.forbidden': '需要管理员权限。',
+      'err.cannot-delete-self': '不能删除自己。',
+      'err.not-found': '用户不存在。',
+      'err.server-misconfigured': '服务端未配置 JWT_SECRET，请在环境变量中设置后重新部署。',
+      'err.storage-unavailable': '存储不可用，请检查 Blob 是否已开通。'
+    },
+    en: {
+      loading: 'Checking your session…',
+      setupEyebrow: 'First run',
+      setupTitle: 'Create the administrator',
+      setupIntro: 'This deployment has no administrator yet. Whoever sets one now becomes the administrator.',
+      setupWarn: 'Do this immediately after deploying. The first person to set it becomes the administrator.',
+      loginEyebrow: 'Sign in',
+      loginTitle: 'DeepSeek Harness',
+      loginIntro: 'There is no self-registration. Ask the administrator to create an account for you.',
+      username: 'Username',
+      password: 'Password',
+      confirm: 'Confirm password',
+      usernameHint: '3–32 characters: letters, digits, underscore, dot or hyphen',
+      passwordHint: 'At least 8 characters, and not a common password',
+      createAdmin: 'Become administrator',
+      signIn: 'Sign in',
+      working: 'Working…',
+      credit: 'made by yifu233',
+      panelTitle: 'Account',
+      close: 'Close',
+      role: 'Role',
+      admin: 'Administrator',
+      user: 'User',
+      disabled: 'Disabled',
+      usage: 'Token usage',
+      unlimited: 'Unlimited',
+      myKey: 'My API key',
+      keySet: 'A private key is set. Save with the field empty to leave it unchanged.',
+      keyNone: 'Currently using the shared key',
+      keyLabel: 'API key',
+      baseUrlLabel: 'Base URL (optional)',
+      save: 'Save',
+      clear: 'Clear',
+      keyCaution: 'Keys are stored server-side and the administrator can technically read them. This is not end-to-end encrypted.',
+      logout: 'Log out',
+      users: 'Users',
+      createUser: 'Create user',
+      quota: 'Quota',
+      quotaBlank: 'Leave blank for unlimited',
+      create: 'Create',
+      colUser: 'User',
+      colRole: 'Role',
+      colUsage: 'Used / quota',
+      colActions: 'Actions',
+      edit: 'Manage',
+      saveQuota: 'Save quota',
+      disable: 'Disable',
+      enable: 'Enable',
+      resetPw: 'Reset password',
+      newPassword: 'New password',
+      del: 'Delete',
+      confirmDelete: 'Delete user %s? Their usage records will be removed too.',
+      defaults: 'Default quota for new users',
+      saved: 'Saved',
+      noUsers: 'No other users yet',
+      errNetwork: 'Network problem. Please try again.',
+      errMismatch: 'The two passwords do not match.',
+      'err.already-claimed': 'An administrator already exists. Sign in instead.',
+      'err.invalid-username': 'That username format is not allowed.',
+      'err.weak-password': 'Password too weak: at least 8 characters and not a common one.',
+      'err.invalid-credentials': 'Wrong username or password.',
+      'err.disabled': 'This account is disabled. Contact the administrator.',
+      'err.duplicate': 'That username already exists.',
+      'err.forbidden': 'Administrator access required.',
+      'err.cannot-delete-self': 'You cannot delete yourself.',
+      'err.not-found': 'No such user.',
+      'err.server-misconfigured': 'JWT_SECRET is not configured on the server. Set it and redeploy.',
+      'err.storage-unavailable': 'Storage unavailable. Check that Blob is enabled.'
+    }
+  };
+
+  const t = (key) => copy[L][key] || key;
+  const errText = (code) => t('err.' + code) || t('errNetwork');
+
+  const el = (tag, cls, text) => {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    // Always textContent, never innerHTML: some of these strings are usernames
+    // and server messages.
+    if (text !== undefined && text !== null) node.textContent = String(text);
+    return node;
+  };
+
+  async function api(path, options) {
+    const init = Object.assign({ credentials: 'same-origin', headers: {} }, options || {});
+    if (init.body !== undefined) {
+      init.headers['content-type'] = 'application/json';
+      init.body = JSON.stringify(init.body);
+      init.method = init.method || 'POST';
+    }
+    let response;
+    try {
+      response = await fetch(path, init);
+    } catch (_) {
+      return { ok: false, error: 'network', status: 0 };
+    }
+    let data = {};
+    try {
+      data = await response.json();
+    } catch (_) { /* empty or non-JSON body */ }
+    if (!response.ok) {
+      return { ok: false, error: data.error || 'network', status: response.status, data: data };
+    }
+    return { ok: true, data: data, status: response.status };
+  }
+
+  const fmt = (value) => Number(value || 0).toLocaleString(L === 'zh' ? 'zh-CN' : 'en-US');
+
+  // ---------------------------------------------------------------- overlay
+
+  let overlay = null;
+  let released = false;
+  let booted = false;
+
+  function releaseTo(conversationId) {
+    if (released) return;
+    released = true;
+    window.__DSH_SET_CONVERSATION_ID__(conversationId);
+    if (overlay) {
+      overlay.remove();
+      overlay = null;
+    }
+    document.removeEventListener('keydown', trapTab, true);
+    if (!booted) {
+      booted = true;
+      window.__DSH_BOOT_SHELL__();
+    }
+  }
+
+  function focusables(root) {
+    return Array.prototype.filter.call(
+      root.querySelectorAll('input,button,a[href],select,textarea,[tabindex]:not([tabindex="-1"])'),
+      (node) => !node.disabled && node.offsetParent !== null
+    );
+  }
+
+  // While the overlay is up nothing behind it may receive focus, otherwise Tab
+  // walks into the shell that has not booted yet.
+  function trapTab(event) {
+    if (!overlay || event.key !== 'Tab') return;
+    const items = focusables(overlay);
+    if (items.length === 0) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  function ensureOverlay() {
+    if (overlay) return overlay;
+    overlay = el('div', 'dsh-gate-overlay');
+    overlay.id = 'dsh-gate-overlay';
+    document.body.appendChild(overlay);
+    document.addEventListener('keydown', trapTab, true);
+    return overlay;
+  }
+
+  function renderLoading() {
+    const host = ensureOverlay();
+    host.textContent = '';
+    const box = el('div', 'dsh-gate-loading');
+    box.appendChild(el('span', 'dsh-gate-spinner'));
+    box.appendChild(el('span', null, t('loading')));
+    host.appendChild(box);
+  }
+
+  function field(labelText, hintText, attrs) {
+    const wrap = el('div', 'dsh-gate-field');
+    const input = el('input', 'dsh-gate-input');
+    input.id = 'dsh-gate-f-' + Math.random().toString(36).slice(2, 9);
+    Object.keys(attrs).forEach((key) => { input.setAttribute(key, attrs[key]); });
+    const label = el('label', 'dsh-gate-label', labelText);
+    label.setAttribute('for', input.id);
+    wrap.appendChild(label);
+    wrap.appendChild(input);
+    if (hintText) wrap.appendChild(el('div', 'dsh-gate-hint', hintText));
+    return { wrap: wrap, input: input };
+  }
+
+  function renderCard(mode) {
+    const setup = mode === 'setup';
+    const host = ensureOverlay();
+    host.textContent = '';
+
+    const card = el('div', 'dsh-gate-card');
+    card.setAttribute('role', 'dialog');
+    card.setAttribute('aria-modal', 'true');
+
+    const mark = el('div', 'dsh-gate-mark');
+    mark.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 4v5c0 4.4-2.9 8.2-7 9-4.1-.8-7-4.6-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg>';
+    card.appendChild(mark);
+
+    card.appendChild(el('div', 'dsh-gate-eyebrow', setup ? t('setupEyebrow') : t('loginEyebrow')));
+    const title = el('h1', 'dsh-gate-title', setup ? t('setupTitle') : t('loginTitle'));
+    title.id = 'dsh-gate-title';
+    card.setAttribute('aria-labelledby', title.id);
+    card.appendChild(title);
+    card.appendChild(el('p', 'dsh-gate-intro', setup ? t('setupIntro') : t('loginIntro')));
+    if (setup) card.appendChild(el('div', 'dsh-gate-warn', t('setupWarn')));
+
+    const form = el('form', 'dsh-gate-form');
+    form.noValidate = true;
+    const user = field(t('username'), setup ? t('usernameHint') : null, {
+      type: 'text', name: 'username', autocomplete: 'username', required: 'required', spellcheck: 'false'
+    });
+    const pass = field(t('password'), setup ? t('passwordHint') : null, {
+      type: 'password', name: 'password',
+      autocomplete: setup ? 'new-password' : 'current-password', required: 'required'
+    });
+    form.appendChild(user.wrap);
+    form.appendChild(pass.wrap);
+    let confirmField = null;
+    if (setup) {
+      confirmField = field(t('confirm'), null, {
+        type: 'password', name: 'confirm', autocomplete: 'new-password', required: 'required'
+      });
+      form.appendChild(confirmField.wrap);
+    }
+
+    const alert = el('div', 'dsh-gate-alert');
+    alert.setAttribute('role', 'alert');
+    alert.hidden = true;
+    form.appendChild(alert);
+
+    const submit = el('button', 'dsh-gate-btn dsh-gate-btn-primary dsh-gate-btn-block',
+      setup ? t('createAdmin') : t('signIn'));
+    submit.type = 'submit';
+    form.appendChild(submit);
+
+    const fail = (message) => {
+      alert.textContent = message;
+      alert.hidden = false;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      alert.hidden = true;
+      if (setup && confirmField && pass.input.value !== confirmField.input.value) {
+        fail(t('errMismatch'));
+        confirmField.input.focus();
+        return;
+      }
+      submit.disabled = true;
+      submit.textContent = t('working');
+      const result = await api(setup ? '/auth/claim' : '/auth/login', {
+        body: { username: user.input.value.trim(), password: pass.input.value }
+      });
+      if (result.ok && result.data && result.data.conversationId) {
+        releaseTo(result.data.conversationId);
+        return;
+      }
+      submit.disabled = false;
+      submit.textContent = setup ? t('createAdmin') : t('signIn');
+      fail(result.error === 'network' ? t('errNetwork') : errText(result.error));
+      if (result.error === 'already-claimed') start();
+    });
+
+    card.appendChild(form);
+    const footer = el('div', 'dsh-gate-footer');
+    footer.appendChild(el('span', 'dsh-gate-credit', t('credit')));
+    card.appendChild(footer);
+    host.appendChild(card);
+    user.input.focus();
+  }
+
+  // ------------------------------------------------------------------ panel
+
+  let me = null;
+  let launcher = null;
+  let panel = null;
+
+  function section(titleText) {
+    const node = el('section', 'dsh-gate-section');
+    if (titleText) node.appendChild(el('h3', 'dsh-gate-section-title', titleText));
+    return node;
+  }
+
+  function meter(used, quota) {
+    const wrap = el('div', 'dsh-gate-usage');
+    const row = el('div', null);
+    row.appendChild(el('span', null, t('usage')));
+    row.appendChild(el('span', 'dsh-gate-usage-value',
+      fmt(used) + ' / ' + (quota === null || quota === undefined ? t('unlimited') : fmt(quota))));
+    wrap.appendChild(row);
+    if (quota !== null && quota !== undefined && quota > 0) {
+      const bar = el('div', 'dsh-gate-meter');
+      const fill = el('div', 'dsh-gate-meter-fill');
+      const pct = Math.min(100, Math.round((used / quota) * 100));
+      fill.style.width = pct + '%';
+      fill.setAttribute('data-level', pct >= 100 ? 'over' : pct >= 80 ? 'warn' : 'ok');
+      bar.appendChild(fill);
+      wrap.appendChild(bar);
+    }
+    return wrap;
+  }
+
+  function buildAccountSection() {
+    const node = section(null);
+    const identity = el('div', 'dsh-gate-identity');
+    identity.appendChild(el('span', 'dsh-gate-identity-name', me.username));
+    const tag = el('span', 'dsh-gate-tag' + (me.role === 'admin' ? ' dsh-gate-tag-admin' : ''),
+      me.role === 'admin' ? t('admin') : t('user'));
+    identity.appendChild(tag);
+    node.appendChild(identity);
+    node.appendChild(meter(me.usedTokens, me.quotaTokens));
+    return node;
+  }
+
+  function buildKeySection() {
+    const node = section(t('myKey'));
+    node.appendChild(el('p', 'dsh-gate-section-note', me.hasPrivateKey ? t('keySet') : t('keyNone')));
+
+    const key = field(t('keyLabel'), null, { type: 'password', autocomplete: 'off', placeholder: 'sk-…' });
+    const base = field(t('baseUrlLabel'), null, {
+      type: 'url', autocomplete: 'off', placeholder: 'https://api.example.com/v1'
+    });
+    if (me.privateBaseUrl) base.input.value = me.privateBaseUrl;
+    node.appendChild(key.wrap);
+    node.appendChild(base.wrap);
+    node.appendChild(el('p', 'dsh-gate-caution', t('keyCaution')));
+
+    const status = el('div', 'dsh-gate-status');
+    status.setAttribute('role', 'alert');
+    status.hidden = true;
+    node.appendChild(status);
+
+    const actions = el('div', 'dsh-gate-actions');
+    const save = el('button', 'dsh-gate-btn dsh-gate-btn-primary', t('save'));
+    save.type = 'button';
+    const clear = el('button', 'dsh-gate-btn dsh-gate-btn-quiet', t('clear'));
+    clear.type = 'button';
+    actions.appendChild(save);
+    actions.appendChild(clear);
+    node.appendChild(actions);
+
+    const send = async (apiKey, baseUrl, button) => {
+      status.hidden = true;
+      button.disabled = true;
+      const label = button.textContent;
+      button.textContent = t('working');
+      const result = await api('/account/apikey', { body: { apiKey: apiKey, baseUrl: baseUrl } });
+      button.disabled = false;
+      button.textContent = label;
+      status.textContent = result.ok ? t('saved') : errText(result.error);
+      status.hidden = false;
+      if (result.ok) await refresh();
+    };
+
+    save.addEventListener('click', () => {
+      const value = key.input.value.trim();
+      if (value.length === 0 && !me.hasPrivateKey) {
+        status.textContent = errText('invalid-credentials');
+        status.hidden = false;
+        return;
+      }
+      send(value.length === 0 ? undefined : value, base.input.value.trim() || null, save);
+    });
+    clear.addEventListener('click', () => {
+      key.input.value = '';
+      send(null, null, clear);
+    });
+    return node;
+  }
+
+  function quotaCell(user) {
+    const input = el('input', 'dsh-gate-quota-input');
+    input.type = 'number';
+    input.min = '0';
+    input.step = '1000';
+    input.setAttribute('aria-label', t('quota') + ' — ' + user.username);
+    input.placeholder = t('unlimited');
+    if (user.quotaTokens !== null && user.quotaTokens !== undefined) input.value = String(user.quotaTokens);
+    return input;
+  }
+
+  function buildAdminSection() {
+    const node = section(t('users'));
+    const status = el('div', 'dsh-gate-status');
+    status.setAttribute('role', 'alert');
+    status.hidden = true;
+
+    const report = (message) => {
+      status.textContent = message;
+      status.hidden = false;
+    };
+
+    const wrap = el('div', 'dsh-gate-tablewrap');
+    const table = el('table', 'dsh-gate-table');
+    const head = el('thead');
+    const headRow = el('tr');
+    [t('colUser'), t('colRole'), t('colUsage'), t('colActions')].forEach((label) => {
+      const th = el('th', null, label);
+      th.scope = 'col';
+      headRow.appendChild(th);
+    });
+    head.appendChild(headRow);
+    table.appendChild(head);
+    const body = el('tbody');
+    table.appendChild(body);
+    wrap.appendChild(table);
+    node.appendChild(wrap);
+    node.appendChild(status);
+
+    const act = async (path, payload, done) => {
+      status.hidden = true;
+      const result = await api(path, { body: payload });
+      if (!result.ok) {
+        report(errText(result.error));
+        return false;
+      }
+      if (done) done();
+      return true;
+    };
+
+    const paint = (users) => {
+      body.textContent = '';
+      if (users.length === 0) {
+        const row = el('tr');
+        const cell = el('td', 'dsh-gate-empty', t('noUsers'));
+        cell.colSpan = 4;
+        row.appendChild(cell);
+        body.appendChild(row);
+        return;
+      }
+      users.forEach((user) => {
+        const row = el('tr');
+        const name = el('td', 'dsh-gate-cell-name');
+        name.appendChild(el('span', null, user.username));
+        if (user.disabled) name.appendChild(el('span', 'dsh-gate-tag dsh-gate-tag-off', t('disabled')));
+        row.appendChild(name);
+        row.appendChild(el('td', null, user.role === 'admin' ? t('admin') : t('user')));
+        row.appendChild(el('td', 'dsh-gate-num',
+          fmt(user.usedTokens) + ' / ' +
+          (user.quotaTokens === null || user.quotaTokens === undefined ? t('unlimited') : fmt(user.quotaTokens))));
+
+        const actions = el('td', 'dsh-gate-cell-actions');
+        const toggle = el('button', 'dsh-gate-btn dsh-gate-btn-tiny dsh-gate-btn-quiet', t('edit'));
+        toggle.type = 'button';
+        toggle.setAttribute('aria-expanded', 'false');
+        actions.appendChild(toggle);
+        row.appendChild(actions);
+        body.appendChild(row);
+
+        const detail = el('tr', 'dsh-gate-detail');
+        detail.hidden = true;
+        const detailCell = el('td');
+        detailCell.colSpan = 4;
+        const inner = el('div', 'dsh-gate-detail-inner');
+
+        const quota = quotaCell(user);
+        const saveQuota = el('button', 'dsh-gate-btn dsh-gate-btn-tiny dsh-gate-btn-primary', t('saveQuota'));
+        saveQuota.type = 'button';
+        saveQuota.addEventListener('click', async () => {
+          const raw = quota.value.trim();
+          const value = raw.length === 0 ? null : Number(raw);
+          if (value !== null && (!Number.isSafeInteger(value) || value < 0)) return report(errText('invalid-username'));
+          await act('/admin/users/update', { id: user.id, quotaTokens: value }, refreshAdmin);
+        });
+
+        const ban = el('button', 'dsh-gate-btn dsh-gate-btn-tiny dsh-gate-btn-quiet',
+          user.disabled ? t('enable') : t('disable'));
+        ban.type = 'button';
+        ban.addEventListener('click', async () => {
+          await act('/admin/users/update', { id: user.id, disabled: !user.disabled }, refreshAdmin);
+        });
+
+        const pw = el('input', 'dsh-gate-input');
+        pw.type = 'password';
+        pw.autocomplete = 'new-password';
+        pw.placeholder = t('newPassword');
+        pw.setAttribute('aria-label', t('newPassword') + ' — ' + user.username);
+        const resetPw = el('button', 'dsh-gate-btn dsh-gate-btn-tiny dsh-gate-btn-quiet', t('resetPw'));
+        resetPw.type = 'button';
+        resetPw.addEventListener('click', async () => {
+          if (pw.value.length === 0) return;
+          const done = await act('/admin/users/update', { id: user.id, password: pw.value });
+          if (done) {
+            pw.value = '';
+            report(t('saved'));
+          }
+        });
+
+        const remove = el('button', 'dsh-gate-btn dsh-gate-btn-tiny dsh-gate-btn-danger', t('del'));
+        remove.type = 'button';
+        remove.addEventListener('click', async () => {
+          if (!window.confirm(t('confirmDelete').replace('%s', user.username))) return;
+          await act('/admin/users/delete', { id: user.id }, refreshAdmin);
+        });
+
+        inner.appendChild(el('span', 'dsh-gate-detail-text', t('quota')));
+        inner.appendChild(quota);
+        inner.appendChild(saveQuota);
+        inner.appendChild(ban);
+        inner.appendChild(pw);
+        inner.appendChild(resetPw);
+        inner.appendChild(remove);
+        detailCell.appendChild(inner);
+        detail.appendChild(detailCell);
+        body.appendChild(detail);
+
+        toggle.addEventListener('click', () => {
+          const open = detail.hidden;
+          detail.hidden = !open;
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+    };
+
+    // Create user
+    const create = el('form', 'dsh-gate-row');
+    const newUser = field(t('username'), null, { type: 'text', autocomplete: 'off', required: 'required' });
+    const newPass = field(t('password'), null, { type: 'password', autocomplete: 'new-password', required: 'required' });
+    const newQuota = field(t('quota'), t('quotaBlank'), { type: 'number', min: '0', step: '1000' });
+    const createBtn = el('button', 'dsh-gate-btn dsh-gate-btn-primary', t('create'));
+    createBtn.type = 'submit';
+    create.appendChild(newUser.wrap);
+    create.appendChild(newPass.wrap);
+    create.appendChild(newQuota.wrap);
+    create.appendChild(createBtn);
+    create.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const raw = newQuota.input.value.trim();
+      const ok = await act('/admin/users', {
+        username: newUser.input.value.trim(),
+        password: newPass.input.value,
+        quotaTokens: raw.length === 0 ? null : Number(raw)
+      }, refreshAdmin);
+      if (ok) {
+        newUser.input.value = '';
+        newPass.input.value = '';
+        newQuota.input.value = '';
+        report(t('saved'));
+      }
+    });
+    node.appendChild(el('h3', 'dsh-gate-section-title', t('createUser')));
+    node.appendChild(create);
+
+    // Default quota
+    const defaults = el('form', 'dsh-gate-row');
+    const defaultQuota = field(t('defaults'), t('quotaBlank'), { type: 'number', min: '0', step: '1000' });
+    const saveDefaults = el('button', 'dsh-gate-btn dsh-gate-btn-quiet', t('save'));
+    saveDefaults.type = 'submit';
+    defaults.appendChild(defaultQuota.wrap);
+    defaults.appendChild(saveDefaults);
+    defaults.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const raw = defaultQuota.input.value.trim();
+      const ok = await act('/admin/settings', { defaultQuotaTokens: raw.length === 0 ? null : Number(raw) });
+      if (ok) report(t('saved'));
+    });
+    node.appendChild(defaults);
+
+    async function refreshAdmin() {
+      const [users, settings] = await Promise.all([api('/admin/users'), api('/admin/settings')]);
+      if (users.ok && users.data && Array.isArray(users.data.users)) paint(users.data.users);
+      else report(errText(users.error));
+      if (settings.ok && settings.data) {
+        const value = settings.data.defaultQuotaTokens;
+        defaultQuota.input.value = value === null || value === undefined ? '' : String(value);
+      }
+    }
+
+    refreshAdmin();
+    return node;
+  }
+
+  function buildPanel() {
+    panel = el('div', 'dsh-gate-panel');
+    panel.hidden = true;
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-modal', 'false');
+
+    const head = el('div', 'dsh-gate-panel-head');
+    const title = el('h2', 'dsh-gate-panel-title', t('panelTitle'));
+    title.id = 'dsh-gate-panel-title';
+    panel.setAttribute('aria-labelledby', title.id);
+    const close = el('button', 'dsh-gate-close');
+    close.type = 'button';
+    close.setAttribute('aria-label', t('close'));
+    close.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    close.addEventListener('click', closePanel);
+    head.appendChild(title);
+    head.appendChild(close);
+    panel.appendChild(head);
+
+    const body = el('div', 'dsh-gate-panel-body');
+    body.appendChild(buildAccountSection());
+    body.appendChild(buildKeySection());
+    if (me.role === 'admin') body.appendChild(buildAdminSection());
+
+    const out = section(null);
+    const logout = el('button', 'dsh-gate-btn dsh-gate-btn-quiet dsh-gate-btn-block', t('logout'));
+    logout.type = 'button';
+    logout.addEventListener('click', async () => {
+      logout.disabled = true;
+      await api('/auth/logout', { method: 'POST', body: {} });
+      location.reload();
+    });
+    out.appendChild(logout);
+    body.appendChild(out);
+
+    panel.appendChild(body);
+    document.body.appendChild(panel);
+  }
+
+  function openPanel() {
+    if (panel) panel.remove();
+    buildPanel();
+    panel.hidden = false;
+    launcher.setAttribute('aria-expanded', 'true');
+    const items = focusables(panel);
+    if (items.length > 0) items[0].focus();
+    document.addEventListener('keydown', panelEscape, true);
+  }
+
+  function closePanel() {
+    if (panel) panel.hidden = true;
+    launcher.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('keydown', panelEscape, true);
+    launcher.focus();
+  }
+
+  function panelEscape(event) {
+    if (event.key === 'Escape' && panel && !panel.hidden) {
+      event.stopPropagation();
+      closePanel();
+    }
+  }
+
+  async function refresh() {
+    const result = await api('/account/me');
+    if (result.ok && result.data && result.data.username) {
+      me = result.data;
+      if (launcher) {
+        const name = launcher.querySelector('.dsh-gate-launcher-name');
+        if (name) name.textContent = me.username;
+      }
+      return true;
+    }
+    return false;
+  }
+
+  function mountLauncher() {
+    if (launcher) return;
+    launcher = el('button', 'dsh-gate-launcher');
+    launcher.type = 'button';
+    launcher.id = 'dsh-gate-launcher';
+    launcher.setAttribute('aria-expanded', 'false');
+    launcher.setAttribute('aria-haspopup', 'dialog');
+    launcher.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg>';
+    launcher.appendChild(el('span', 'dsh-gate-launcher-name', me.username));
+    launcher.addEventListener('click', () => {
+      if (panel && !panel.hidden) closePanel();
+      else openPanel();
+    });
+    document.body.appendChild(launcher);
+  }
+
+  // ------------------------------------------------------------------- boot
+
+  async function start() {
+    renderLoading();
+    const status = await api('/auth/status');
+    if (!status.ok) {
+      renderCard('login');
+      const alert = overlay && overlay.querySelector('.dsh-gate-alert');
+      if (alert) {
+        alert.textContent = status.error === 'network' ? t('errNetwork') : errText(status.error);
+        alert.hidden = false;
+      }
+      return;
+    }
+    const data = status.data || {};
+    if (!data.hasAdmin) return renderCard('setup');
+    if (!data.authenticated) return renderCard('login');
+    if (!await refresh()) return renderCard('login');
+    releaseTo(me.conversationId);
+    mountLauncher();
+  }
+
+  // State always comes from the server: the session is an HttpOnly cookie this
+  // script cannot read, so nothing here is cached in storage.
+  async function begin() {
+    await start();
+    if (released && me === null && await refresh()) mountLauncher();
+    else if (released && me !== null) mountLauncher();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', begin);
+  else begin();
+})();
+
+</script>
+<!-- /dsh-gate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>DeepSeek Harness</title>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-Cjbwl5VI.js">
+    <link rel="stylesheet" crossorigin href="/assets/vendor-CjyC-hUb.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-CSGf6Qzd.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
